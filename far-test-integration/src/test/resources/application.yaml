@@ -1,0 +1,24 @@
+quarkus:
+  application:
+    name: far-integration-test
+  http:
+    port: 0
+    test-port: 0
+  log:
+    level: INFO
+    category:
+      "net.far":
+        level: DEBUG
+
+far:
+  identity: https://far-test.example.com
+  namespaces:
+    - stub
+  delegation:
+    limit: 5
+  peers: { }
+  protocol:
+    version: 0.1.0
+  keys:
+    algorithm: ed25519
+    id: far-test.example.com#key-1

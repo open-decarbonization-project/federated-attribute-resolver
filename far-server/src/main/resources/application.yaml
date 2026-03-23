@@ -1,0 +1,31 @@
+quarkus:
+  application:
+    name: federated-attribute-resolver
+  http:
+    port: 8080
+  smallrye-openapi:
+    info-title: Federated Attribute Resolver API
+    info-version: 0.1.0
+    info-description: A federated resolution protocol for environmental attribute certificates
+  log:
+    level: INFO
+    category:
+      "net.far":
+        level: DEBUG
+
+far:
+  identity: https://far.example.com
+  namespaces:
+    - stub
+  delegation:
+    limit: 5
+  peers: { }
+  protocol:
+    version: 0.1.0
+  keys:
+    algorithm: ed25519
+    directory: ""
+    id: key-1
+    previous:
+      directory: ""
+      expires: ""
